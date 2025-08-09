@@ -160,10 +160,14 @@
         <div class="cta-content">
             <h2>Be the First to Transform Your Game</h2>
             <p>Join the waitlist for early access when we launch on the App Store</p>
-            <form class="email-form" onsubmit="handleSubmit(event)">
-                <input type="email" class="email-input" placeholder="Enter your email" required>
-                <button type="submit" class="btn btn-primary">Join Waitlist</button>
-            </form>
+<form class="email-form" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="waitlist">
+    <p class="hidden">
+        <label>Don't fill this out: <input name="bot-field"></label>
+    </p>
+    <input type="email" name="email" class="email-input" placeholder="Enter your email" required>
+    <button type="submit" class="btn btn-primary">Join Waitlist</button>
+</form>
             <p style="margin-top: 1rem; font-size: 0.9rem; color: #999;">
                 🔒 We respect your privacy. No spam, ever.
             </p>
