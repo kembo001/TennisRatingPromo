@@ -333,11 +333,12 @@ function showDemoModal() {
     modal.innerHTML = `
         <div class="modal-content">
             <span class="close-modal">&times;</span>
-            <div class="video-placeholder">
-                <div class="play-button">▶️</div>
-                <p>Demo video coming soon!</p>
-                <p class="modal-cta">Join the waitlist to be notified when it's ready</p>
-            </div>
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <video controls autoplay>
+            <source src="TennisPromo.mp4" type="video/mp4">
+        </video>
+    </div>
         </div>
     `;
     
